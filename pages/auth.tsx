@@ -2,7 +2,7 @@ import Input from "@/components/Input";
 import axios from "axios";
 import { NextPageContext } from "next";
 import { getSession, signIn } from "next-auth/react";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
@@ -22,7 +22,7 @@ export async function getServerSideProps(context: NextPageContext) {
   };
 }
 
-const auth = () => {
+const Auth = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -141,4 +141,4 @@ const auth = () => {
   );
 };
 
-export default auth;
+export default Auth;
